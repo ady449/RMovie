@@ -1,6 +1,11 @@
 {
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": "rmovie"
+  },
 
   "compilerOptions": {
+
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -15,7 +20,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,

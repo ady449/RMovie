@@ -1,10 +1,10 @@
-import styled from '@emotion/styled';
-import React from 'react';
+import styled from "@emotion/styled";
+import React from "react";
 
 export const Box = styled.div`
   padding: 80px 60px;
   background: black;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 
@@ -39,38 +39,19 @@ export const Row = styled.div`
   }
 `;
 
-export const FooterLink = styled.a`
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 18px;
-  text-decoration: none;
-
-  &:hover {
-    color: green;
-    transition: 200ms ease-in;
-  }
-`;
-
-export const Heading = styled.p`
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 40px;
-  font-weight: bold;
-`;
-
 const Footer = () => {
-  return (
-    <Box>
-      <h1 style={{ color: 'green', textAlign: 'center', marginTop: '-50px' }}>
+	return (
+		<Box>
+			<h1 style={{ color: "green", textAlign: "center", marginTop: "-50px" }}>
         RMovie adi
 
-      </h1>
-      <Container>
-        <Row>
-          <Column></Column>
-        </Row>
-      </Container>
-    </Box>
-  );
+			</h1>
+			<Container>
+				<Row>
+					<Column></Column>
+				</Row>
+			</Container>
+		</Box>
+	);
 };
 export default Footer;
