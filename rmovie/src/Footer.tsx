@@ -1,57 +1,36 @@
-import styled from "@emotion/styled";
-import React from "react";
-
-export const Box = styled.div`
-  padding: 80px 60px;
-  background: black;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-
-  @media (max-width: 1000px) {
-    padding: 70px 30px;
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  /* background: red; */
-`;
-
-export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 60px;
-`;
-
-export const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  grid-gap: 20px;
-
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-`;
-
-const Footer = () => {
-	return (
-		<Box>
-			<h1 style={{ color: "green", textAlign: "center", marginTop: "-50px" }}>
-        RMovie adi
-
-			</h1>
-			<Container>
-				<Row>
-					<Column></Column>
-				</Row>
-			</Container>
-		</Box>
-	);
-};
-export default Footer;
+import { Grid } from '@mui/material';
+import MasterCard from 'img/mastercard.png';
+import Paypal from 'img/paypal.png';
+import Visa from 'img/visa.png';
+import Image from 'next/image';
+import React from 'react';
+// const MyImage = () => {
+//   return <Image src={SafeShoppingImage} alt="Picture of the author" />;
+//
+export default function Bottom() {
+  return (
+    <Grid
+      container
+      justifyContent="space-between"
+      // alignItems="center"
+      sx={{
+        padding: '40px 16px 40px 16px',
+      }}
+    >
+      <Grid sx={{ color: '#798D92', fontSize: '13px' }}>
+        © 2022 RMovie Toate drepturile rezervate
+      </Grid>
+      <Grid sx={{ display: 'display-flex', marginLeft: '30px' }}>
+        <Grid sx={{ border: '1px solid #d3e1e4' }}>
+          <Image width={52} height={32} alt=" " src={MasterCard} />
+        </Grid>
+        <Grid sx={{ border: '1px solid #d3e1e4' }}>
+          <Image width={52} height={32} alt=" " src={Visa} />
+        </Grid>
+        <Grid sx={{ border: '1px solid #d3e1e4' }}>
+          <Image width={52} height={32} alt=" " src={Paypal} />
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+}
