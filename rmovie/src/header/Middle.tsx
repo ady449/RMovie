@@ -1,5 +1,5 @@
 import { Grid, Link} from "@mui/material";
-import RMovie from "img/RMovie.png";
+import RMovie from "img/RMovie4.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
 import React from "react";
@@ -13,13 +13,13 @@ import InputBase from '@mui/material/InputBase';
 // };
 const SearchIconWhite = () => {
 	return (
-		<SearchIcon sx={{ color: "white", marginLeft: "15px", marginRight: "13px" }}
+		<SearchIcon sx={{ color: "white"}}
 		></SearchIcon>
 	);
 };
 const SearchWhite = () => {
 	return (
-		<SearchIcon sx={{ color: "white", marginLeft: "15px", marginRight: "13px" }}
+		<SearchIcon sx={{ color: "white" }}
 		></SearchIcon>
 	);
 };
@@ -33,10 +33,7 @@ const Search = styled('div')(({ theme }) => ({
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
-  },
+
 }));
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -47,6 +44,14 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
 }));
+const styleHomeButton: CSS.Properties = {
+  color: "red",
+  textDecoration: "none",
+  '&hover': {
+    opacity:0.5,
+    color:"black"
+  },
+}
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
@@ -94,7 +99,7 @@ export default function Midle() {
 			</Grid>
 
 			<Grid item>
-				<Link href="/" style={{ textDecoration: "none", color: "black"}}>Home</Link>
+				<Link href="/" style={styleHomeButton }>Home</Link>
 			</Grid>
 
 			<Grid item>
