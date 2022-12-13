@@ -1,5 +1,6 @@
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 import SearchIcon from '@mui/icons-material/Search';
-import { Grid, Link } from '@mui/material';
+import { Grid, Link, Typography } from '@mui/material';
 import InputBase from '@mui/material/InputBase';
 import { alpha, styled } from '@mui/material/styles';
 import RMovie from 'img/RMovie4.png';
@@ -12,6 +13,10 @@ import React from 'react';
 // };
 const SearchIconWhite = () => {
   return <SearchIcon sx={{ color: '#b01a4d' }}></SearchIcon>;
+};
+
+const LiveTvIconBig = () => {
+  return <LiveTvIcon sx={{ fontSize: '55px' }}></LiveTvIcon>;
 };
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -60,7 +65,11 @@ export default function Midle() {
       }}
     >
       <Grid item>
-        <Image width={108} height={60} alt=" " src={RMovie} />
+        {/* <Image width={108} height={60} alt=" " src={RMovie} /> */}
+        <LiveTvIconBig></LiveTvIconBig>
+        <Typography sx={{ fontSize: '15px', color: '#b01a4d', font: 'Monaco' }}>
+          RMOVIE
+        </Typography>
       </Grid>
       <Link
         href="/produkt/0-7-karat-diamant"
